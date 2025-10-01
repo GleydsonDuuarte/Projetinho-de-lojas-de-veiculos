@@ -2,63 +2,28 @@
 let currentModelIndex = 0;
 let currentImageIndex = 0;
 
-// Função para carregar os veículos
-function loadVehicles() {
-    const vehicleGrid = document.getElementById('vehicle-grid');
+// Função para carregar a seção de modelos
+function loadModelsSection() {
+    const modelsGrid = document.getElementById('modelsGrid');
     const vehicleSelect = document.getElementById('veiculo');
     
     // Limpar grid
-    vehicleGrid.innerHTML = '';
+    modelsGrid.innerHTML = '';
     
-    // Adicionar veículos ao grid
-    vehiclesData.forEach(vehicle => {
-        const vehicleCard = createVehicleCard(vehicle);
-        vehicleGrid.appendChild(vehicleCard);
+    // Adicionar modelos ao grid e ao select
+    vehiclesData.forEach((model, index) => {
+        const modelCard = createModelCard(model, index);
+        modelsGrid.appendChild(modelCard);
         
         // Adicionar opção ao select
         const option = document.createElement('option');
-        option.value = vehicle.id;
-        option.textContent = `${vehicle.name} - R$ ${vehicle.price}`;
+        option.value = model.id;
+        option.textContent = `${model.name} - R$ ${model.price}`;
         vehicleSelect.appendChild(option);
     });
 }
 
-// Função para criar card de veículo
-function createVehicleCard(vehicle) {
-    const card = document.createElement('div');
-    card.className = 'vehicle-card';
-    
-    card.innerHTML = `
-        <div class="vehicle-image" style="background-image: url('${vehicle.image}')"></div>
-        <div class="vehicle-info">
-            <h3>${vehicle.name}</h3>
-            <div class="vehicle-price">R$ ${vehicle.price}</div>
-            <div class="vehicle-details">
-                <span><i class="fas fa-calendar"></i> ${vehicle.year}</span>
-                <span><i class="fas fa-tachometer-alt"></i> ${vehicle.km} km</span>
-                ${vehicle.features ? `<span><i class="fas fa-car"></i> ${vehicle.features.join(', ')}</span>` : ''}
-            </div>
-            <div class="vehicle-location">
-                <i class="fas fa-map-marker-alt"></i> ${vehicle.location}
-            </div>
-            <a href="#contato" class="btn" data-vehicle="${vehicle.name}">Tenho Interesse</a>
-        </div>
-    `;
-    
-    return card;
-}
-
-// Função para carregar a seção de modelos
-function loadModelsSection() {
-    const modelsGrid = document.getElementById('modelsGrid');
-    
-    vehiclesData.forEach((model, index) => {
-        const modelCard = createModelCard(model, index);
-        modelsGrid.appendChild(modelCard);
-    });
-}
-
-// Função para criar card do modelo na seção de modelos
+// Função para criar card do modelo
 function createModelCard(model, index) {
     const card = document.createElement('div');
     card.className = 'model-card';
@@ -73,11 +38,18 @@ function createModelCard(model, index) {
             <h3 class="model-name">${model.name}</h3>
             <div class="model-price">R$ ${model.price}</div>
             <div class="model-details">
-                <span>${model.year} • ${model.km} km</span>
+                <span><i class="fas fa-calendar"></i> ${model.year}</span>
+                <span><i class="fas fa-tachometer-alt"></i> ${model.km} km</span>
+                ${model.features ? `<span><i class="fas fa-car"></i> ${model.features.join(', ')}</span>` : ''}
+            </div>
+            <div class="model-location">
+                <i class="fas fa-map-marker-alt"></i> 
+                <a href="https://maps.google.com/?q=Rua+das+Fronteiras+77+Caucaia+CE" target="_blank" class="address-link">${model.location}</a>
             </div>
             <div class="view-gallery">
                 <i class="fas fa-expand"></i> Ver Galeria
             </div>
+            <a href="#contato" class="btn" data-vehicle="${model.name}" style="margin-top: 15px; display: block; text-align: center;">Tenho Interesse</a>
         </div>
     `;
     
@@ -210,9 +182,6 @@ function setupGalleryEvents() {
 
 // Função para inicializar o site
 function init() {
-    // Carregar veículos
-    loadVehicles();
-    
     // Carregar seção de modelos
     loadModelsSection();
     
@@ -224,23 +193,11 @@ function init() {
         document.querySelector('nav ul').classList.toggle('show');
     });
     
-    // Formulário de Contato
+    // Formulário de Contato - Remover evento submit padrão pois Netlify cuida do envio
     document.getElementById('form-contato').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const formData = {
-            nome: document.getElementById('nome').value,
-            telefone: document.getElementById('telefone').value,
-            email: document.getElementById('email').value,
-            veiculo: document.getElementById('veiculo').value,
-            mensagem: document.getElementById('mensagem').value
-        };
-        
-        // Aqui você pode enviar os dados para um servidor
-        console.log('Dados do formulário:', formData);
-        
-        alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-        this.reset();
+        // O Netlify Forms cuida do envio, então podemos remover o preventDefault
+        // para permitir o redirecionamento para a página de sucesso
+        console.log('Formulário enviado para Netlify Forms');
     });
     
     // Navegação suave para âncoras
@@ -283,6 +240,32 @@ function init() {
                 block: 'start'
             });
         }
+    });
+    
+    // Atualizar ano atual e anos de tradição
+    updateFooterInfo();
+}
+
+// Função para atualizar informações do rodapé
+function updateFooterInfo() {
+    // Atualiza o ano atual no rodapé
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Calcula anos de tradição
+    const anoAtual = new Date().getFullYear();
+    const anosTradicao = anoAtual - 1999;
+
+    // Atualiza em todos os locais
+    const ids = [
+        "anos-tradicao-hero",
+        "anos-tradicao-sobre",
+        "anos-tradicao-contato",
+        "anos-tradicao-footer",
+        "anos-tradicao-footer-text"
+    ];
+    ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = anosTradicao;
     });
 }
 

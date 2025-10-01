@@ -10,10 +10,10 @@ const vehiclesData = [
         location: "Rua das Fronteiras N°77",
         category: "sedan",
         gallery: [
-    "images/vehicles/civic/civic-1.jpg",
-    "images/vehicles/civic/civic-2.jpg",
-    "images/vehicles/civic/civic-3.jpg"
-    ]
+            "images/vehicles/civic/civic-1.jpg",
+            "images/vehicles/civic/civic-2.jpg",
+            "images/vehicles/civic/civic-3.jpg"
+        ]
     },
     {
         id: 2,
@@ -25,10 +25,10 @@ const vehiclesData = [
         location: "Rua das Fronteiras N°77",
         category: "hatch",
         gallery: [
-    "images/vehicles/classic/classic-1.jpg",
-    "images/vehicles/classic/classic-2.jpg",
-    "images/vehicles/classic/classic-3.jpg"
-    ]
+            "images/vehicles/classic/classic-1.jpg",
+            "images/vehicles/classic/classic-2.jpg",
+            "images/vehicles/classic/classic-3.jpg"
+        ]
     },
     {
         id: 3,
@@ -40,10 +40,10 @@ const vehiclesData = [
         location: "Rua das Fronteiras N°77",
         category: "hatch",
         gallery: [
-    "images/vehicles/mobi/mobi-1.jpg",
-    "images/vehicles/mobi/mobi-2.jpg",
-    "images/vehicles/mobi/mobi-3.jpg"
-    ]
+            "images/vehicles/mobi/mobi-1.jpg",
+            "images/vehicles/mobi/mobi-2.jpg",
+            "images/vehicles/mobi/mobi-3.jpg"
+        ]
     },
     {
         id: 4,
@@ -55,10 +55,10 @@ const vehiclesData = [
         location: "Rua das Fronteiras N°77",
         category: "hatch",
         gallery: [
-    "images/vehicles/uno/uno-1.jpg",
-    "images/vehicles/uno/uno-2.jpg",
-    "images/vehicles/uno/uno-3.jpg"
-    ]
+            "images/vehicles/uno/uno-1.jpg",
+            "images/vehicles/uno/uno-2.jpg",
+            "images/vehicles/uno/uno-3.jpg"
+        ]
     },
     {
         id: 5,
@@ -70,11 +70,11 @@ const vehiclesData = [
         location: "Rua das Fronteiras N°77",
         category: "pickup",
         gallery: [
-    "images/vehicles/hilux/hilux-1.jpg",
-    "images/vehicles/hilux/hilux-2.jpg",
-    "images/vehicles/hilux/hilux-3.jpg",
-    "images/vehicles/hilux/hilux-4.jpg"
-    ]
+            "images/vehicles/hilux/hilux-1.jpg",
+            "images/vehicles/hilux/hilux-2.jpg",
+            "images/vehicles/hilux/hilux-3.jpg",
+            "images/vehicles/hilux/hilux-4.jpg"
+        ]
     },
     {
         id: 6,
@@ -87,10 +87,10 @@ const vehiclesData = [
         category: "pickup",
         features: ["4x4"],
         gallery: [
-    "images/vehicles/toro/toro-1.jpg",
-    "images/vehicles/toro/toro-2.jpg",
-    "images/vehicles/toro/toro-3.jpg"
-    ]
+            "images/vehicles/toro/toro-1.jpg",
+            "images/vehicles/toro/toro-2.jpg",
+            "images/vehicles/toro/toro-3.jpg"
+        ]
     },
     {
         id: 7,
@@ -102,10 +102,10 @@ const vehiclesData = [
         location: "Rua das Fronteiras N°77",
         category: "van",
         gallery: [
-    "images/vehicles/master/master-1.jpg",
-    "images/vehicles/master/master-2.jpg",
-    "images/vehicles/master/master-3.jpg"
-    ]
+            "images/vehicles/master/master-1.jpg",
+            "images/vehicles/master/master-2.jpg",
+            "images/vehicles/master/master-3.jpg"
+        ]
     }
 ];
 
