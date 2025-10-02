@@ -913,3 +913,182 @@ footer {
 .model-card .view-gallery {
     pointer-events: auto;
 }
+/* ===== CORREÇÃO PARA ALTURA EM DISPOSITIVOS MÓVEIS ===== */
+
+/* Garantir que o body e html ocupem 100% da altura */
+html, body {
+    height: 100%;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main deve crescer para ocupar o espaço disponível */
+main {
+    flex: 1 0 auto;
+}
+
+/* Footer deve ficar fixo no final */
+footer {
+    flex-shrink: 0;
+}
+
+/* Correção específica para a página de sucesso */
+.success-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    background-color: #f7fafc;
+    min-height: calc(100vh - 200px);
+}
+
+/* Garantir que as seções tenham altura mínima */
+section {
+    padding: 80px 0;
+    min-height: auto; /* Remove qualquer min-height fixo */
+}
+
+/* Correção para o hero section em mobile */
+.hero {
+    min-height: auto;
+    padding: 100px 0;
+}
+
+/* Prevenir que imagens causem overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Correção específica para o modelo de cards */
+.models-grid {
+    min-height: auto;
+}
+
+/* Garantir que o container não force altura mínima */
+.container {
+    min-height: auto;
+}
+
+/* ===== CORREÇÕES ESPECÍFICAS PARA MOBILE ===== */
+
+@media (max-width: 768px) {
+    /* Ajustar padding das seções em mobile */
+    section {
+        padding: 60px 0;
+    }
+    
+    .hero {
+        padding: 80px 0;
+        min-height: auto;
+    }
+    
+    /* Garantir que o footer ocupe espaço correto */
+    footer {
+        margin-top: auto;
+    }
+    
+    /* Ajustar altura do conteúdo de sucesso */
+    .success-content {
+        min-height: calc(100vh - 150px);
+        padding: 40px 0;
+    }
+    
+    /* Prevenir overflow horizontal */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 50px 0;
+    }
+    
+    .hero {
+        padding: 70px 0;
+    }
+    
+    .success-content {
+        min-height: calc(100vh - 120px);
+        padding: 30px 0;
+    }
+}
+
+/* ===== GARANTIR QUE NÃO HAJA ESPAÇO BRANCO EXTRA ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Remover margens e paddings extras */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Garantir que todas as sections tenham conteúdo visível */
+section:empty {
+    display: none;
+}
+
+/* Correção para o grid de modelos */
+.models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    min-height: auto;
+}
+
+/* Garantir que o main ocupe espaço correto */
+main {
+    width: 100%;
+}
+/* ===== CORREÇÃO PARA ESPAÇO BRANCO NO MOBILE ===== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Remover qualquer altura mínima excessiva */
+section {
+    min-height: auto !important;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+}
