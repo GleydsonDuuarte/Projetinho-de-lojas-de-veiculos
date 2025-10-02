@@ -180,6 +180,27 @@ function setupGalleryEvents() {
     });
 }
 
+// Configuração do formulário Netlify
+function setupForm() {
+    const form = document.querySelector('form[name="contato"]');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            // Validação básica
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+            
+            if (!nome || !telefone) {
+                e.preventDefault();
+                alert('Por favor, preencha pelo menos o nome e telefone.');
+                return;
+            }
+            
+            console.log('Formulário sendo enviado para Netlify...');
+            // O Netlify cuida do resto e redireciona para sucesso.html
+        });
+    }
+}
+
 // Função para inicializar o site
 function init() {
     // Carregar seção de modelos
@@ -188,16 +209,12 @@ function init() {
     // Configurar eventos da galeria
     setupGalleryEvents();
     
+    // Configurar formulário
+    setupForm();
+    
     // Menu Mobile
     document.querySelector('.mobile-menu').addEventListener('click', function() {
         document.querySelector('nav ul').classList.toggle('show');
-    });
-    
-    // Formulário de Contato - Remover evento submit padrão pois Netlify cuida do envio
-    document.getElementById('form-contato').addEventListener('submit', function(e) {
-        // O Netlify Forms cuida do envio, então podemos remover o preventDefault
-        // para permitir o redirecionamento para a página de sucesso
-        console.log('Formulário enviado para Netlify Forms');
     });
     
     // Navegação suave para âncoras

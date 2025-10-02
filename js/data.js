@@ -121,3 +121,45 @@ const dealershipInfo = {
     yearsOfExperience: 26,
     services: ["Compra", "Venda", "Troca", "Financia"]
 };
+
+// 🚫 O QUE NÃO PRECISA MEXER:
+// NUNCA altere estes arquivos para adicionar/remover carros:
+
+// ❌ index.html
+
+// ❌ sucesso.html
+
+// ❌ css/styles.css
+
+// ❌ js/scripts.js
+
+// 📝 EXEMPLO PRÁTICO COMPLETO:
+// Adicionando um Volkswagen Golf:
+// javascript
+// // js/data.js - ADICIONE ISSO:
+// {
+//     id: 8,
+//     name: "Volkswagen Golf 2.0",
+//     price: "95.900,00",
+//     year: "2020/2021",
+//     km: "32.000",
+//     image: "images/vehicles/golf-2.0.jpg",
+//     location: "Rua das Fronteiras N°77",
+//     category: "hatch",
+//     features: ["Automático", "Teto Solar", "Multimídia"],
+//     gallery: [
+//         "images/vehicles/golf/golf-1.jpg",
+//         "images/vehicles/golf/golf-2.jpg",
+//         "images/vehicles/golf/golf-3.jpg",
+//         "images/vehicles/golf/golf-4.jpg"
+//     ]
+// }
+
+// 🎉 RESUMO FINAL:
+// 📍 PARA EDITAR CARROS:
+// SOMENTE no arquivo → js/data.js
+
+// 🚫 NÃO MEXA EM:
+// index.html, styles.css, scripts.js
+
+// O sistema está 100% automatizado! Qualquer alteração no data.js reflete automaticamente em todo o site! 🚀

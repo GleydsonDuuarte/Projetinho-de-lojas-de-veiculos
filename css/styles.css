@@ -766,10 +766,6 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-    
-    .btn-outline {
-        margin-left: 0;
-    }
 }
 
 @media (max-width: 768px) {
@@ -870,4 +866,21 @@ footer {
     .success-title {
         font-size: 1.8rem;
     }
+}
+
+/* Animações suaves */
+.model-card,
+.btn,
+.nav-btn {
+    transition: all 0.3s ease;
+}
+
+/* Foco visível para acessibilidade */
+.btn:focus,
+.nav-btn:focus,
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid #e53e3e;
+    outline-offset: 2px;
 }

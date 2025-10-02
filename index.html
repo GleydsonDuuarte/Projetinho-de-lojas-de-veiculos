@@ -146,14 +146,13 @@
                 </div>
                 <div class="contact-form">
                     <h3>Envie uma Mensagem</h3>
-                    <form id="form-contato" name="form-contato" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/sucesso.html">
-                        <!-- Campo hidden para o Netlify Forms -->
-                        <input type="hidden" name="form-name" value="form-contato">
+                    <form name="contato" method="POST" netlify action="/sucesso.html">
+                        <input type="hidden" name="form-name" value="contato">
                         
-                        <!-- Honeypot field para spam -->
-                        <p class="hidden">
-                            <label>Não preencha este campo se for humano: <input name="bot-field" /></label>
-                        </p>
+                        <!-- Honeypot field -->
+                        <div class="hidden">
+                            <label>Não preencha este campo: <input name="bot-field"></label>
+                        </div>
                         
                         <div class="form-group">
                             <label for="nome">Nome Completo *</label>
