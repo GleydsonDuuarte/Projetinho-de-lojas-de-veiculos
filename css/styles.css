@@ -884,3 +884,32 @@ footer {
     outline: 2px solid #e53e3e;
     outline-offset: 2px;
 }
+
+/* No arquivo styles.css, adicione: */
+
+/* Garantir que o botão não herde o cursor pointer do card */
+.btn-interest {
+    cursor: pointer !important;
+}
+
+/* Melhorar a área clicável da galeria */
+.view-gallery {
+    cursor: pointer;
+}
+
+/* Garantir que o botão tenha comportamento próprio */
+.model-card .btn {
+    pointer-events: auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Evitar que o clique no botão propague para o card */
+.model-card * {
+    pointer-events: none;
+}
+
+.model-card .btn,
+.model-card .view-gallery {
+    pointer-events: auto;
+}

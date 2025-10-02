@@ -24,10 +24,10 @@ function loadModelsSection() {
 }
 
 // Função para criar card do modelo
+// Função para criar card do modelo
 function createModelCard(model, index) {
     const card = document.createElement('div');
     card.className = 'model-card';
-    card.onclick = () => openGallery(index);
     
     card.innerHTML = `
         <div class="gallery-badge">
@@ -49,9 +49,17 @@ function createModelCard(model, index) {
             <div class="view-gallery">
                 <i class="fas fa-expand"></i> Ver Galeria
             </div>
-            <a href="#contato" class="btn" data-vehicle="${model.name}" style="margin-top: 15px; display: block; text-align: center;">Tenho Interesse</a>
+            <a href="#contato" class="btn btn-interest" data-vehicle="${model.name}" style="margin-top: 15px; display: block; text-align: center;">Tenho Interesse</a>
         </div>
     `;
+    
+    // Evento para abrir galeria - apenas no card, não no botão
+    card.addEventListener('click', (e) => {
+        // Não abrir galeria se clicar no botão "Tenho Interesse"
+        if (!e.target.closest('.btn-interest')) {
+            openGallery(index);
+        }
+    });
     
     return card;
 }
