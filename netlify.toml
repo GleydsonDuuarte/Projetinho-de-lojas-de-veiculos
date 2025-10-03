@@ -1,4 +1,4 @@
-# Corrigir netlify.toml
+# Criar netlify.toml CORRETO (sem comentários PowerShell)
 @"
 [build]
   publish = "."
