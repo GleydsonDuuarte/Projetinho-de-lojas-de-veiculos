@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fetch = require('node-fetch');
 
 exports.handler = async function(event, context) {
@@ -148,3 +149,14 @@ function formatKM(km) {
   
   return num.toLocaleString('pt-BR');
 }
+=======
+﻿// sheets-proxy.js - Netlify Function
+const fetch = require('node-fetch');
+
+exports.handler = async function(event, context) {
+    return {
+        statusCode: 200,
+        body: JSON.stringify({ message: 'Function funcionando' })
+    };
+};
+>>>>>>> a23cc1c99ff3d2c20ba42de4282a8f012b38e4d0

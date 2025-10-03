@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [build]
+=======
+﻿[build]
+>>>>>>> a23cc1c99ff3d2c20ba42de4282a8f012b38e4d0
   publish = "."
   command = "echo 'No build command needed'"
 
@@ -14,7 +18,10 @@
   to = "/index.html"
   status = 200
 
+<<<<<<< HEAD
 # Configuração para forms
+=======
+>>>>>>> a23cc1c99ff3d2c20ba42de4282a8f012b38e4d0
 [[headers]]
   for = "/*"
   [headers.values]
@@ -22,7 +29,10 @@
     "X-XSS-Protection" = "1; mode=block"
     "Cache-Control" = "public, max-age=3600"
 
+<<<<<<< HEAD
 # Cache para assets estáticos
+=======
+>>>>>>> a23cc1c99ff3d2c20ba42de4282a8f012b38e4d0
 [[headers]]
   for = "/css/*"
   [headers.values]
@@ -36,4 +46,8 @@
 [[headers]]
   for = "/images/*"
   [headers.values]
+<<<<<<< HEAD
     "Cache-Control" = "public, max-age=31536000"
+=======
+    "Cache-Control" = "public, max-age=31536000"
+>>>>>>> a23cc1c99ff3d2c20ba42de4282a8f012b38e4d0

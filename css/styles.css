@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Reset e estilos base */
 * {
     margin: 0;
@@ -1080,3 +1081,16 @@ main {
 .model-card .view-gallery {
     pointer-events: auto;
 }
+=======
+﻿/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #1a365d;
+}
+>>>>>>> a23cc1c99ff3d2c20ba42de4282a8f012b38e4d0

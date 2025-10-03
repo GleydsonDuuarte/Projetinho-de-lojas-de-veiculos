@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Configurações iniciais e funções de UI
 function setupGalleryEvents() {
     const modal = document.getElementById('galleryModal');
@@ -140,3 +141,7 @@ function updateFooterInfo() {
 
 // Inicializar quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', init);
+=======
+﻿// scripts.js - Funcionalidades do site
+console.log('scripts.js carregado');
+>>>>>>> a23cc1c99ff3d2c20ba42de4282a8f012b38e4d0

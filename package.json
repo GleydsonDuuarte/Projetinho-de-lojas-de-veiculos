@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 {
+=======
+﻿{
+>>>>>>> a23cc1c99ff3d2c20ba42de4282a8f012b38e4d0
   "name": "caucaia-autos",
   "version": "1.0.0",
   "description": "Site da Caucaia Autos - Concessionária de veículos",
@@ -25,4 +29,8 @@
   "engines": {
     "node": ">=18"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a23cc1c99ff3d2c20ba42de4282a8f012b38e4d0

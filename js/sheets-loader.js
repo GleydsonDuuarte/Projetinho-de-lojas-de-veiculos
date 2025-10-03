@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Configuração - URLs da API
 const LOCAL_SHEETS_URL = '/.netlify/functions/sheets-proxy';
 const FALLBACK_SHEETS_URL = `https://docs.google.com/spreadsheets/d/1oLi9rBgMJmQxnluvO65RypDo6nD3zUxWDSdN6eQJoTs/gviz/tq?tqx=out:json`;
@@ -386,3 +387,7 @@ document.addEventListener('DOMContentLoaded', function() {
         retryButton.addEventListener('click', loadModelsSection);
     }
 });
+=======
+﻿// sheets-loader.js - Carrega dados do Google Sheets
+console.log('sheets-loader.js carregado');
+>>>>>>> a23cc1c99ff3d2c20ba42de4282a8f012b38e4d0
