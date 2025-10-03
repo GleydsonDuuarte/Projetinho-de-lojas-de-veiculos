@@ -1,0 +1,28 @@
+﻿{
+  "name": "caucaia-autos",
+  "version": "1.0.0",
+  "description": "Site da Caucaia Autos - Concessionária de veículos",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Build completo'",
+    "dev": "echo 'Modo desenvolvimento'",
+    "netlify:build": "echo 'Build para Netlify'"
+  },
+  "keywords": [
+    "concessionária",
+    "veículos",
+    "carros",
+    "automóveis"
+  ],
+  "author": "Gleydson de Almeida Duarte",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "@netlify/functions": "^2.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
